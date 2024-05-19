@@ -1,7 +1,7 @@
 ## Proyecto de Landing Page y Sistema de Autenticación
   Este proyecto consiste en una Landing Page para la promoción de cursos premium, así como un sistema de autenticación para manejar el acceso de usuarios al contenido y a las funcionalidades de la página.
 
-#Contenido del Proyecto
+# Contenido del Proyecto
 
   El proyecto está estructurado en los siguientes archivos y carpetas:
   
@@ -30,7 +30,7 @@
   googleLogin.js: Archivo Javascript que contiene la lógica para iniciar sesión mediante Google.
   
 
-#Funcionalidades Destacadas
+# Funcionalidades Destacadas
 
   Autenticación de Usuarios: Se permite a los usuarios registrarse e iniciar sesión utilizando su correo electrónico y contraseña, así como también mediante su cuenta de Google.
   
@@ -40,7 +40,7 @@
   
   Promoción de Cursos Premium: Se ofrece una galería de cursos premium con imágenes y descripciones al acceder.
 
-#Configuración y Uso
+# Configuración y Uso
   Para utilizar este proyecto, se debe seguir los siguientes pasos:
     Configurar un proyecto en Firebase y obtener las credenciales correspondientes (API Key, Auth Domain, etc.).
     Reemplazar las credenciales en el archivo firebase.js.
