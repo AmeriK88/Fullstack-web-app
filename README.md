@@ -1,5 +1,5 @@
 # Proyecto de Landing Page y Sistema de Autenticación
-  Este proyecto consiste en una Landing Page para la promoción de cursos premium, así como un sistema de autenticación para manejar el acceso de usuarios al contenido y a las funcionalidades de la página.
+  Este proyecto consiste en una Landing Page con animaciones, así como un sistema de autenticación para manejar el acceso de usuarios al contenido y a las funcionalidades de la página.
 
 ## Contenido del Proyecto
 
