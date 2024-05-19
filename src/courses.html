@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samuel Perez</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <!-- Toastyfy -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    
+    <!-- Main styles -->
+    <link rel="stylesheet" href="./main.css">
+    <script src="./main.js" type="module"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark-tertiary navbar-dark">
+        <div class="container">
+          <a class="navbar-brand" href="index.html"><img class="img-logo" src="images/logo.png" alt="logo"></a>
+          <button class="navbar-toggler btn-nav-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item logged-out logged-in">
+                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item logged-out logged-in">
+                <a class="nav-link" aria-current="page" href="index.html#courses">Cursos</a>
+              </li>
+              <li class="nav-item logged-out">
+                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signinModal">Login</a>
+              </li>
+              <li class="nav-item logged-in">
+                <a class="nav-link" href="#">Servicios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link logged-out" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">Signup</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link logged-in" href="#" id="logout">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Signin Modal -->
+<div class="modal fade" id="signinModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content bg-dark">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Iniciar sesión</h1>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <!-- Login form  -->
+          <form id="login-form">
+            <label for="login-email">Email:</label>
+            <input id="login-email" type="email" class="form-control mb-3" placeholder="Email" required>
+            <label for="login-password">Password:</label>
+            <input id="login-password" type="password" class="form-control mb-3" placeholder="*******" required>
+            <button type="submit" class="btn btn-primary w-100 mb-4">Entrar</button>
+          </form>
+          <button type="button" id="googleLogin" class="btn btn-info">
+            Google
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+   <!-- Signup Modal -->
+<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content bg-dark">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Registrarse</h1>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Signup form  -->
+          <form action="" id="signup-form">
+            <label for="signup-name">Nombre:</label>
+            <input id="signup-name" type="text" class="form-control mb-3" placeholder="Nombre" required>
+            <label for="signup-email">Email:</label>
+            <input id="signup-email" type="email" class="form-control mb-3" placeholder="Email" required>
+            <label for="signup-password">Contraseña:</label>
+            <input id="signup-password" type="password" class="form-control mb-3" placeholder="*******" required>
+            <button type="submit" class="btn btn-primary w-100 mb-4">Registrarse</button>
+          </form>
+          <button type="button" id="googleSignup" class="btn btn-info">
+            Google
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Aquí se mostrará la información del curso -->
+  <main>
+    <section id="course-info" class="py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 text-center">
+           
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer mt-5 py-4 bg-light">
+    <div class="container text-center">
+        <div class="contact-info">
+            <p>Email: ejemplo@example.com</p>
+        </div>
+    </div>
+  </footer>
+
+ <!-- Script Boostrap -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+ <!-- Script Toastify -->
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+</html> 

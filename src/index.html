@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samuel Perez</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <!-- Toastyfy -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    
+    <!-- Main styles -->
+    <link rel="stylesheet" href="./main.css">
+    <script src="./main.js" type="module"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark-tertiary navbar-dark">
+        <div class="container">
+          <a class="navbar-brand" href="index.html"><img class="img-logo" src="images/logo.png" alt="logo"></a>
+          <button class="navbar-toggler btn-nav-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item logged-out logged-in">
+                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item logged-out logged-in">
+                <a class="nav-link" aria-current="page" href="index.html#courses">Cursos</a>
+              </li>
+              <li class="nav-item logged-out">
+                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signinModal">Login</a>
+              </li>
+              <li class="nav-item logged-in">
+                <a class="nav-link" href="#">Servicios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link logged-out" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">Signup</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link logged-in" href="#" id="logout">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Signin Modal -->
+      <div class="modal fade" id="signinModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content bg-dark">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Iniciar sesión</h1>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <!-- Login form  -->
+                <form id="login-form">
+                  <label for="login-email">Email:</label>
+                  <input id="login-email" type="email" class="form-control mb-3" placeholder="Email" required>
+                  <label for="login-password">Password:</label>
+                  <input id="login-password" type="password" class="form-control mb-3" placeholder="*******" required>
+                  <button type="submit" class="btn btn-primary w-100 mb-4">Entrar</button>
+                </form>
+                <button type="button" id="googleLogin" class="btn btn-info">
+                  Google
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Signup Modal -->
+        <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content bg-dark">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Registrarse</h1>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <!-- Signup form  -->
+                  <form action="" id="signup-form">
+                    <label for="signup-name">Nombre:</label>
+                    <input id="signup-name" type="text" class="form-control mb-3" placeholder="Nombre" required>
+                    <label for="signup-email">Email:</label>
+                    <input id="signup-email" type="email" class="form-control mb-3" placeholder="Email" required>
+                    <label for="signup-password">Contraseña:</label>
+                    <input id="signup-password" type="password" class="form-control mb-3" placeholder="*******" required>
+                    <button type="submit" class="btn btn-primary w-100 mb-4">Registrarse</button>
+                  </form>
+                  <button type="button" id="googleSignup" class="btn btn-info">
+                    Google
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- Sección centrada con contenido de ancho completo -->
+        <section class="bg-light py-5">
+          <div class="container text-center">
+              <div class="row">
+                  <div class="col-12 mb-4">
+                      <h2 class="mb-4">Sobre Mí</h2>
+                      <p class="lead">Influyente  comprometido en inspirar y educar a otros mediante la compartición de mis experiencias y conocimientos. Con una trayectoria de más de [X] años en la industria, me he distinguido por mi apasionado enfoque en [Área de interés], donde he cultivado un profundo conocimiento y una perspectiva única. Mi compromiso con [Causa] impulsa cada una de mis acciones y me motiva a continuar generando un impacto positivo en la comunidad. Estoy comprometido en proporcionar contenido valioso y significativo que motive, informe y empodere a aquellos que me siguen.</p>
+                      <p class="lead">Descubre más sobre mí y mi viaje en las redes sociales.</p>
+                      <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                          <a href="https://twitter.com/samuelps21" class="btn btn-primary me-md-2 mb-2 mb-md-0" target="_blank">Twitter - X</a>
+                          <a href="https://www.youtube.com/@samuelps21" class="btn btn-primary" target="_blank">YouTube</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+           <!-- Imagen banner -->
+          <div class="container p-5">
+            <div class="row justify-content-center">
+              <div class="col-md-12">
+                <img src="images/banner.jpg" alt="Banner image" class="img-fluid banner-img">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Posts entry -->
+        <div class="container p-6 mt-5">
+          <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+              <ul class="list-group posts">
+
+              </ul>
+            </div>
+          </div>
+        </div>
+       
+        <!-- Sección de Galería de Imágenes -->
+        <section id="courses" class="py-5">
+          <div class="container">
+              <h2 class="text-center py-5 mb-5">Regístrate en mis cursos premium</h2>
+              <div class="row">
+                  <div class="col-md-4 mb-4 text-center">
+                    <div class="image-container">
+                      <a href="./courses.html?course=1" id="course-1"><img src="images/curso1.jpg" alt="Imagen 1" class="img-fluid img-hover max-width-100"></a>
+                      <figcaption class="lead m-4 pt-4">Curso Nº1</figcaption>
+                    </div>          
+                  </div>
+                  <div class="col-md-4 mb-4 text-center">
+                    <div class="image-container">
+                      <a href="./courses.html?course=2"id="course-2"><img src="images/curso2.png" alt="Imagen 2" class="img-fluid img-hover max-width-100"></a>
+                      <figcaption class="lead m-4 pt-4">Curso Nº2</figcaption>
+                    </div>          
+                  </div>
+                  <div class="col-md-4 mb-4 text-center">
+                    <div class="image-container">
+                      <a href="./courses.html?course=3" id="course-3"><img src="images/curso3.png" alt="Imagen 3" class="img-fluid img-hover max-width-100"></a>
+                      <figcaption class="lead m-4 pt-4">Curso Nº3</figcaption>
+                    </div>          
+                  </div>
+                  <div class="col-md-4 mb-4 text-center">
+                    <div class="image-container">
+                      <a href="./courses.html?course=4" id="course-4"><img src="images/curso4.png" alt="Imagen 4" class="img-fluid img-hover max-width-100"></a>
+                      <figcaption class="lead m-4 pt-4">Curso Nº4</figcaption>
+                    </div>          
+                  </div>
+                  <div class="col-md-4 mb-4 text-center">
+                    <div class="image-container">
+                      <a href="./courses.html?course=5" id="course-5"><img src="images/curso5.jpg" alt="Imagen 5" class="img-fluid img-hover max-width-100"></a>
+                      <figcaption class="lead m-4 pt-4">Curso Nº5</figcaption>
+                    </div>          
+                  </div>
+                  <div class="col-md-4 mb-4 text-center">
+                    <div class="image-container">
+                      <a href="./courses.html?course=6" id="course-6"><img src="images/curso6.png" alt="Imagen 6" class="img-fluid img-hover max-width-100"></a>
+                      <figcaption class="lead m-4 pt-4">Curso Nº6</figcaption>
+                    </div>          
+                  </div>
+                  <!-- Agrega más imágenes según sea necesario -->
+              </div>
+          </div>
+        </section>
+
+        <footer class="footer mt-5 py-4 bg-light">
+          <div class="container text-center">
+              <div class="contact-info">
+                  <p>Email: ejemplo@example.com</p>
+              </div>
+          </div>
+        </footer>
+      
+
+ <!-- Script Boostrap -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+ <!-- Script Toastify -->
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+</body>
+</html> 

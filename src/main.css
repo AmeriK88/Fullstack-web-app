@@ -1,0 +1,173 @@
+:root {
+    --glow-color: hsl(0, 0%, 100%);
+    --background-nav: rgba(0, 0, 0, 0.6);
+    --background-nav-media: rgba(0, 0, 0, 0.4);
+    --body-color: black;
+    --border-color: rgba(255, 255, 255, .5);
+  }
+
+body {
+    background: var(--body-color);
+    color: rgb(138, 138, 138);
+    overflow-x: hidden;
+}
+
+.img-logo {
+  border-radius: 2.5em;
+  max-width: 5em;
+  max-height: 5em;
+}
+
+/* Imagenes premium */ 
+.image-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.banner-img {
+  border-radius: 25px;
+  width: 100%;
+  height: auto;
+}
+
+.img-hover {
+  transition: transform 0.4s ease;
+  border-radius: 25px;
+  max-width: 75%; 
+  height: auto; 
+}
+
+
+.img-hover:hover {
+  transform: scale(1.1);
+}
+
+/* Glow effec + animations */ 
+.main-wrapper {
+  text-align: center;
+}
+
+.glowing-btn {
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--glow-color);
+  cursor: pointer;
+  padding: 1.2rem 1.2rem;
+  border: 0.2em solid var(--glow-color);
+  border-radius: 1em;
+  background: none;
+  perspective: 4em;
+  font-family: "Raleway", sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+  letter-spacing: 1em;
+  -webkit-box-shadow: inset 0 0 0.6em 0 var(--glow-color), 0 0 0.6em 0 var(--glow-color);
+  -moz-box-shadow: inset 0 0 0.6em 0 var(--glow-color), 0 0 0.6em 0 var(--glow-color);
+  box-shadow: inset 0px 0px 0.6em 0px var(--glow-color), 0 0 0.6em 0 var(--glow-color);
+  animation: border-flicker 2s linear infinite;
+}
+
+.glowing-txt {
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em rgba(0, 0, 0, 0.7);;
+  animation: text-flicker 3.5s linear infinite;
+}
+
+.faulty-word {
+  opacity: 0.5;
+  animation: faulty-flicker 2.5s linear infinite;
+}
+
+.glowing-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.7;
+  filter: blur(0.8em);
+  transform: translateY(160%) rotateX(120deg) scale(1.4, 0.75);
+  background: var(--glow-color);
+  pointer-events: none;
+}
+
+.glowing-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: -1;
+  background-color: var(--glow-color);
+  box-shadow: 0 0 25em 0.25em var(--glow-color);
+  transition: opacity 100ms linear;
+  box-shadow: 0 0 10px var(--glow-color); 
+  border-radius: 0.8em;
+}
+
+.glowing-btn:hover {
+  color: rgba(0, 0, 0, 0.7);
+  text-shadow: none;
+  animation: none;
+}
+
+.glowing-btn:hover .glowing-txt {
+  animation: none;
+}
+
+.glowing-btn:hover .faulty-word {
+  animation: none;
+  text-shadow: none;
+  opacity: 1;
+}
+
+.glowing-btn:hover:before {
+  filter: blur(1.5em);
+  opacity: 1;
+}
+
+.glowing-btn:hover:after {
+  opacity: 1;
+}
+
+@keyframes faulty-flicker {
+  0%, 2%, 21% {
+    opacity: 0.15;
+  }
+  4%, 19%, 83%, 87% {
+    opacity: 0.65;
+  }
+  23% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes text-flicker {
+  0%, 8%, 12%, 30%, 100% {
+    opacity: 1;
+  }
+  2%, 25%, 77% {
+    opacity: 0.35;
+  }
+  70%, 72% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes border-flicker {
+  0%, 4%, 100% {
+    opacity: 0.35;
+  }
+  2%, 8%, 70% {
+    opacity: 1;
+  }
+}
