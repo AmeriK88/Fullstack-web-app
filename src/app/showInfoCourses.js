@@ -5,7 +5,7 @@ export function showInfoCourses(needLogin = false) {
     const courses = {
         '1': {
             nombre: 'Curso 1',
-            descripcion: 'Hola, esta es la descripción del Curso 1.',
+            descripcion: 'Hola, esta es la descripción del Curso 1. Conócete antes de que sea tarde. Aquí veremos una sección de mi',
             imagenURL: 'images/curso1.jpg'
         },
         '2': {
@@ -13,6 +13,26 @@ export function showInfoCourses(needLogin = false) {
             descripcion: 'Esta es la descripción del Curso 2.',
             imagenURL: 'images/curso2.png'
         },
+        '3': {
+            nombre: 'Curso 3',
+            descripcion: 'Esta es la descripción del Curso 3.',
+            imagenURL: 'images/curso3.png'
+        },
+        '4': {
+            nombre: 'Curso 4',
+            descripcion: 'Esta es la descripción del Curso 4.',
+            imagenURL: 'images/curso4.png'
+        },
+        '5': {
+            nombre: 'Curso 5',
+            descripcion: 'Esta es la descripción del Curso 5.',
+            imagenURL: 'images/curso5.jpg'
+        },
+        '6': {
+            nombre: 'Curso 6',
+            descripcion: 'Esta es la descripción del Curso 6.',
+            imagenURL: 'images/curso6.png'
+        },                    
         // Agrega más cursos según sea necesario
     };
 
@@ -39,6 +59,9 @@ export function showInfoCourses(needLogin = false) {
                     </div>
                 </div>
             `;
+        }  else {
+            // Mostrar mensaje de error si no se encuentra información del curso
+            courseInfoContainer.innerHTML = `<p>No se encontró información para el curso ${courseId}</p>`;
         }
     } else if (!courseInfoId && window.location.pathname.includes('courses.html')) {
         const courseInfoContainer = document.getElementById('course-info');
