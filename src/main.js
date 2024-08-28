@@ -12,14 +12,17 @@ import { showInfoCourses } from './app/showInfoCourses.js';
 
 
 onAuthStateChanged(auth, async (user) => {
-        if (user) {
-          const querySnapshot = await getDocs(collection(db, 'posts'))
-          setupPosts(querySnapshot.docs)
-
-          showInfoCourses()
-        } else {
-          setupPosts([])
+    if (user) {
+        try {
+            const querySnapshot = await getDocs(collection(db, 'posts'));
+            setupPosts(querySnapshot.docs);
+            showInfoCourses();
+        } catch (error) {
+            console.error("Error fetching posts:", error);
         }
-        loginCheck(user)
-        showInfoCourses()
-})
+    } else {
+        setupPosts([]);
+        showInfoCourses(true);
+    }
+    loginCheck(user);
+});

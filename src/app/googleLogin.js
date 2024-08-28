@@ -49,8 +49,3 @@ googleButtonSignup.addEventListener('click', async () => {
         showMessage('Error al iniciar sesión con Google. Por favor, inténtalo de nuevo más tarde.', 'error');
     }
 });
-
-
-
-
-
